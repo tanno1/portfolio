@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <h1>Noah Tanner</h1>
+      <navbar></navbar>
     </div>
   );
 }
