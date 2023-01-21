@@ -22,9 +22,9 @@ const navbar = () => {
   ]
 
   return (
-    <div>
-        <div id='logo'>
-            
+    <div className='flex justify-between items-center w-full h-20 text-black px-4 z-10 py-2'>
+        <div id='title'>
+            <h1>Tanner</h1>
         </div>
         <div id='clickables'>
             <div id='lightdark'></div>
@@ -33,7 +33,7 @@ const navbar = () => {
                   {links.map(({id, link}) => (
                     <li
                       key={id}
-                      className=''
+                      className='px.4 cursor-pointer capitalize font-medium text-black'
                     >
                       <link>
                         {link}
