@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
 
@@ -28,18 +29,22 @@ const Navbar = () => {
   )
 
   return (
-
-    <div className='flex justify-between items-center w-full h-20 bg-zinc-900 text-zinc-00'>
-      <div id="logo">
-
+    <div id='root'>
+      <div className='flex justify-between items-center w-full h-20 bg-zinc-900 text-zinc-100'>
+        <div id="logo">
+        </div>
+        <div id='burger-menu-btn'>
+          <button>
+            <FaBars size={30} color='white'/>
+          </button>
+        </div>
+        <div>
+            <ul id="nav" className='flex flex-col justify-center items-center space-x-4 px-4'>
+              {listItems}
+            </ul>
+        </div>
       </div>
-      <ul id="nav" className='flex flex-col justify-center items-center'>
-        {listItems}
-      </ul>
-
-
     </div>
-
   );
 }
 
