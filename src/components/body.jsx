@@ -1,9 +1,9 @@
 import React from 'react'
 
-const body = () => {
+const Body = () => {
   return (
-    <div>body</div>
+    <div>Body</div>
   )
 }
 
-export default body
+export default Body
