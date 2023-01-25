@@ -21,8 +21,10 @@ const Navbar = () => {
     },
   ]
 
-  const listItems = links.map((id, link) =>
-    <li key={id} className='font-medium text-white'>{link}</li>
+  const listItems = links.map((id) =>
+    <li key={id} className='font-medium text-white'>
+      {id.link}
+    </li>
   )
 
   return (
@@ -31,7 +33,7 @@ const Navbar = () => {
       <div id="logo">
 
       </div>
-      <ul id="nav">
+      <ul id="nav" className='flex flex-col justify-center items-center'>
         {listItems}
       </ul>
 
