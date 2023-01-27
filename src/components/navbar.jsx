@@ -46,9 +46,11 @@ const Navbar = () => {
         </div>
 
         {nav && (
-          <ul className='px-4 cursor-pointer font-medium text-zinc-100' onClick={() => setNav(!nav)}>
-            {listItems}
-          </ul>
+          <div className='px-4 cursor-pointer font-medium text-black absolute'>
+            <ul onClick={() => setNav(!nav)}>
+              {listItems}
+            </ul>
+          </div>
         )}
 
       </div>
