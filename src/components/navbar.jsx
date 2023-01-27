@@ -28,12 +28,19 @@ const Navbar = () => {
     </li>
   )
 
+  const [visible, setVisible] = useState(true)
+
+
+  function handleClick() {
+    setVisible(!visible);
+  }
+
   return (
     <div id='root'>
       <div className='flex justify-between items-center w-full h-20 bg-zinc-900 text-zinc-100'>
         <div id="logo">
         </div>
-        <div id='burger-menu-btn'>
+        <div id='burger-menu-btn' className='absolute top-5 right-5'>
           <button>
             <FaBars size={30} color='white'/>
           </button>
