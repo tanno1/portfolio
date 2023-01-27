@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className='flex justify-between items-center w-full h-20 bg-zinc-900 text-zinc-100'>
         <div id="logo">
         </div>
-        <ul id="large-nav" className='hidden md:flex md:flex-col justify-center items-center space-x-4 px-4'>
+        <ul id="large-nav" className='hidden md:flex md:flex-row justify-center items-center space-x-4 px-4'>
           {listItems}
         </ul>
 
