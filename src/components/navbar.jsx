@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Transition } from 'react-transition-group';
+import { useRef } from 'react';
 
 const Navbar = () => {
 
@@ -39,7 +41,7 @@ const Navbar = () => {
           {listItems}
         </ul>
 
-        <div onClick={() => setNav(!nav)} className='md:hidden cursor-pointer z-100 text-zinc-100'>
+        <div onClick={() => setNav(!nav)} className='absolute right-5 md:hidden cursor-pointer z-100 text-zinc-100'>
           {nav ? <FaTimes size={30}/>: <FaBars size={30}/>}
         </div>
 
