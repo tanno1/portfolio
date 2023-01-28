@@ -47,7 +47,7 @@ const Navbar = () => {
 
         {nav && (
           <div className='z-1000 left-0 top-20 absolute h-screen w-screen px-4 cursor-pointer font-medium text-black bg-zinc-900'>
-            <ul onClick={() => setNav(!nav)}>
+            <ul className='w-fit flex flex-col justify-center' onClick={() => setNav(!nav)}>
               {listItems}
             </ul>
           </div>
