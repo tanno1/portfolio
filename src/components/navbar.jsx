@@ -41,12 +41,12 @@ const Navbar = () => {
           {listItems}
         </ul>
 
-        <div onClick={() => setNav(!nav)} className='absolute right-5 md:hidden cursor-pointer z-100 text-zinc-100'>
+        <div onClick={() => setNav(!nav)} className='absolute right-5 md:hidden cursor-pointer z-10000 text-zinc-100'>
           {nav ? <FaTimes size={30}/>: <FaBars size={30}/>}
         </div>
 
         {nav && (
-          <div className='px-4 cursor-pointer font-medium text-black absolute'>
+          <div className='z-1000 left-0 top-20 absolute h-screen w-screen px-4 cursor-pointer font-medium text-black bg-zinc-900'>
             <ul onClick={() => setNav(!nav)}>
               {listItems}
             </ul>
