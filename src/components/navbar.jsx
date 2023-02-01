@@ -61,7 +61,7 @@ const Navbar = () => {
           <div className='z-100 absolute bottom-0 top-20 h-[calc(screen-20px)] w-screen px-4 cursor-pointer font-medium text-black bg-zinc-900 justify-center items-center'>
             <ul>
               {links.map((id) => 
-                <li>
+                <li className='grid grid-cols-2 flex items-center'>
                   <img src={id.photo} alt={id.alt}></img>
                   <p>
                     {id.link}
