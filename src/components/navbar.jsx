@@ -2,33 +2,39 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Transition } from 'react-transition-group';
 import { useRef } from 'react';
+import connectedppl from '../resources/connectedppl.png';
+import laptop from '../resources/laptop.png';
+import aboutme from '../resources/aboutme.png';
+import skills from '../resources/skills.png';
 
 const Navbar = () => {
 
   const links = [
     {
       id: 1,
-      link: 'Projects'
+      link: 'Projects',
+      photo: laptop,
+      alt: 'projects icon'
     },
     {
       id: 2,
-      link: 'About'
+      link: 'About',
+      photo: aboutme,
+      alt: 'about icon'
     },
     {
       id: 3,
-      link: 'Contact'
+      link: 'Contact',
+      photo: connectedppl,
+      alt: 'contact icon'
     },
     {
       id: 4,
-      link: 'Resume'
+      link: 'Skills',
+      photo: skills,
+      alt: 'skills icon'
     },
   ]
-
-  const listItems = links.map((id) =>
-    <li key={id} className='font-medium text-white px-4 cursor-pointer hover:scale-105 duration-200'>
-      {id.link}
-    </li>
-  )
 
   const [nav, setNav] = useState(false)
 
@@ -38,7 +44,13 @@ const Navbar = () => {
         <div id="logo">
         </div>
         <ul id="large-nav" className='hidden md:flex md:flex-row justify-center items-center space-x-4 px-4'>
-          {listItems}
+          {links.map((id) => 
+            <li>
+              <p>
+                {id.link}
+              </p>
+            </li>
+          )}
         </ul>
 
         <div onClick={() => setNav(!nav)} className='absolute right-5 md:hidden cursor-pointer z-10000 text-zinc-100'>
@@ -46,9 +58,16 @@ const Navbar = () => {
         </div>
 
         {nav && (
-          <div className='z-1000 left-0 top-20 absolute h-screen w-screen px-4 cursor-pointer font-medium text-black bg-zinc-900 flex justify-center items-center'>
-            <ul className='' onClick={() => setNav(!nav)}>
-              {listItems}
+          <div className='z-100 absolute bottom-0 top-20 h-[calc(screen-20px)] w-screen px-4 cursor-pointer font-medium text-black bg-zinc-900 justify-center items-center'>
+            <ul>
+              {links.map((id) => 
+                <li>
+                  <img src={id.photo} alt={id.alt}></img>
+                  <p>
+                    {id.link}
+                  </p>
+                </li>
+              )}
             </ul>
           </div>
         )}
